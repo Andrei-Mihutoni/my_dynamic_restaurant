@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Le Restaurant</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <a href="/">Home</a>
+            </nav>
+
+        </header>
+
+
+        <main>
+            <div class="banner_wrapper">
+                <h1 class="title">Le Restaurant</h1>
+                <img class="banner_img" src="grafics/images/banner1.jpg">
+            </div>
+
+            <template id="courseTemplate">
+                <article class="course">
+                    <header>
+                        <h3>Soup</h3>
+                        <p class="soldout">Soldout</p>
+                        <img src="grafics/images/food-unsplash.jpg" alt="" />
+                        <p class="price price-discount"><span>69</span> kr</p>
+                        <p class="price price-full"><span>69</span> kr</p>
+                    </header>
+
+                    <section class="info">
+                        <p class="short_description">
+                            Made from okologisk ingredients and love
+                            Made from okologisk ingredients and love
+                            Made from okologisk ingredients and love
+                        </p>
+
+                        <div class="specials">
+                            <img class="vegetarian" src="grafics/images/Vegetarian_logo.png" alt="vegetarian logo" />
+                            <img class="alcohol" src="grafics/images/Alcohol.png" alt="vegetarian logo" />
+                        </div>
+                        <button>See more</button>
+                    </section>
+                </article>
+            </template>
+
+                      <!--Modal-->
+            <div class="modal-background hide">
+                <div class="modal-content">
+                    <h3 class="modal-name">Name</h3>
+                    <img src="" alt="" class="modal-image" />
+                    <p class="modal-description">Long Description</p>
+                    <h4 class="modal-price">Price: <span>price</span> kr</h4>
+                     <img class="modal-vegetarian" src="grafics/images/Vegetarian_logo.png" alt="vegetarian logo" />
+                </div>
+            </div>
+
+        </main>
+
+
+        <footer>
+
+
+
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
