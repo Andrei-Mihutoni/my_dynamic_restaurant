@@ -1,13 +1,3 @@
-//1. create:
-//<a href="main">Sterters</a>
-
-//2. assign link to correct nav
-
-
-
-//4. assign products to correct section
-
-
 //1. fetch cats
 fetch("https://kea-alt-del.dk/t5/api/categories")
     .then(res => res.json())
@@ -35,8 +25,6 @@ function createCategories(data) {
         section.appendChild(h2);
 
         document.querySelector("main").appendChild(section);
-
-
     })
     getProducts();
 }
@@ -51,7 +39,6 @@ function getProducts() {
         .then(function (data) {
             showData(data)
         })
-
 }
 
 
@@ -62,8 +49,8 @@ function showData(jsonData) {
 };
 
 
-// 1 make a template
 
+// 1 make a template
 
 function addCourses(course) {
     //    console.log(course)
@@ -131,16 +118,12 @@ function addCourses(course) {
         fetch(`https://kea-alt-del.dk/t5/api/product?id=${course.id}`)
             .then(res => res.json())
             .then(showDetails);
-
     });
 
 
 
     //    4 append the clone
     document.querySelector(`#${course.category}`).appendChild(courseClone)
-
-
-
 }
 
 
@@ -151,10 +134,6 @@ const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
     modal.classList.add("hide");
 });
-
-//our cloning function
-
-//...
 
 
 
@@ -169,7 +148,7 @@ function showDetails(data) {
     }
 
 
-//adding images to the modal
+    //adding images to the modal
     const imageName = data.image;
     const base = "https://kea-alt-del.dk/t5/site/imgs/";
     const mediumImg = base + "medium/" + imageName + "-md.jpg";
@@ -181,4 +160,29 @@ function showDetails(data) {
     //...
     modal.classList.remove("hide");
     console.log(data)
+}
+
+
+
+
+     // ##### Top button ####
+
+//Get the button
+var mybutton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
